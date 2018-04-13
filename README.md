@@ -65,7 +65,7 @@ yarn start
 
 # Express Setup Using awsmobile-cli
 
-1. Install and configure awsmobile-cli (v1.1.0 above)
+1. Install and configure awsmobile-cli (v1.1.0 and above)
 ```
 npm install -g awsmobile-cli
 awsmobile configure aws
