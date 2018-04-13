@@ -21,7 +21,9 @@ This is a Starter React application for using the Sample app in the AWS AppSync 
 - Authorization
   - The app uses API Key as the authorization mechanism
 
-## AWS Setup
+# Standard Setup
+
+## AWS Setup 
 
 1. Navigate to the AWS AppSync console using the URL: http://console.aws.amazon.com/appsync/home
 
@@ -58,6 +60,30 @@ Start the application:
 
 ```
 yarn
+yarn start
+```
+
+# Express Setup Using awsmobile-cli
+
+1. Install and configure awsmobile-cli (v1.1.0 above)
+```
+npm install -g awsmobile-cli
+awsmobile configure aws
+```
+- Configure your access and secret keys of your aws account that has AppSync permissions (or AdminAccess) and your preferred region. 
+- If you never used AWS MobileHub before, awsmobile-cli will pop-up a Web Browser Window to enable MobileHub on your account.
+
+2. Clone repo and run awsmobile init
+
+```
+git clone https://github.com/aws-samples/aws-mobile-appsync-events-starter-react.git
+cd ./aws-mobile-appsync-events-starter-react
+awsmobile init --yes
+```
+
+3. Start the application:
+
+```
 yarn start
 ```
 

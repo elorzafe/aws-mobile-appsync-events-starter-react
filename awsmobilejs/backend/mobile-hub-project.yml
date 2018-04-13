@@ -1,0 +1,48 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: sampleCloudApi
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /items: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180411112743.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: CKPuPRDwj1G1ViSeYR6ReSTfHF/B68bXduAYOHZ1Y2M=
+            memorySize: '128'
+            modified: '2018-04-11T18:28:29.900+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: BZf95jyh.vj9pW9KCXM02wXHLqCSuCj_
+          '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180411112743.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: CKPuPRDwj1G1ViSeYR6ReSTfHF/B68bXduAYOHZ1Y2M=
+            memorySize: '128'
+            modified: '2018-04-11T18:28:29.900+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: xCfh6sYsRMnNfAg30z54MgvsxBkQOIL2
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn {}
+name: aws-mobile-appsync-events-starter-react-2018-04-11-11-26-47
+region: us-east-1

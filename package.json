@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-amplify": "^0.2.14",
+    "aws-amplify-react": "^0.1.38",
     "aws-appsync": "^1.0.12",
     "aws-appsync-react": "^1.0.6",
     "graphql": "^0.11.7",
